@@ -1,7 +1,7 @@
 # PowerFit
 My Gym website Design (One Scroll Type)!
 Hello Everyone, this is my first 2025 project, i used DeepSite to create this one scroll page website and i edit the final touches for the showdown, Enjoy
-- [Demo project] (https://github.com/ArmanForouharfard/PowerFit/index%201.html)
+- [Demo project] (https://github.com/ArmanForouharfard/PowerFit/index.html)
 - Developed by DeepSite & Arman Forouharfard
 - Technologies Used - Html, CSS, Javascript
 - Role - Frontend
