@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PowerFit Gym - Transform Your Body</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+            
+            body {
+                font-family: 'Poppins', sans-serif;
+                scroll-behavior: smooth;
+            }
+            
+            .bg-primary {
+                background-color: #5804FA;
+            }
+            
+            .text-primary {
+                color: #5804FA;
+            }
+            
+            .bg-secondary {
+                background-color: #FFDE01;
+            }
+            
+            .text-secondary {
+                color: #FFDE01;
+            }
+            
+            .hero-gradient {
+                background: linear-gradient(135deg, #5804FA 0%, #3A01B5 100%);
+            }
+            
+            .membership-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+            
+            .trainer-card:hover .trainer-overlay {
+                opacity: 1;
+            }
+            
+            .nav-link:hover {
+                color: #FFDE01 !important;
+            }
+            
+            .animate-pulse-slow {
+                animation: pulse 3s infinite;
+            }
+            
+            @keyframes pulse {
+                0%, 100% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0.7;
+                }
+            }
+        </style>
+    </head>
+    <body class="bg-gray-50">
+        <!-- Header/Navigation -->
+        <header class="bg-white shadow-md fixed w-full z-50">
+            <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+                <div class="flex items-center">
+                    <i class="fas fa-dumbbell text-3xl text-primary mr-2"></i>
+                    <span class="text-2xl font-bold text-primary">Power<span class="text-secondary">Fit</span></span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-primary font-semibold hover:text-secondary transition">Home</a>
+                    <a href="#about" class="nav-link text-primary font-semibold hover:text-secondary transition">About</a>
+                    <a href="#classes" class="nav-link text-primary font-semibold hover:text-secondary transition">Classes</a>
+                    <a href="#trainers" class="nav-link text-primary font-semibold hover:text-secondary transition">Trainers</a>
+                    <a href="#membership" class="nav-link text-primary font-semibold hover:text-secondary transition">Membership</a>
+                    <a href="#contact" class="nav-link text-primary font-semibold hover:text-secondary transition">Contact</a>
+                </div>
+                
+                <button class="md:hidden text-primary focus:outline-none" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden bg-white w-full px-4 py-3" id="mobile-menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="#home" class="nav-link text-primary font-semibold hover:text-secondary transition">Home</a>
+                    <a href="#about" class="nav-link text-primary font-semibold hover:text-secondary transition">About</a>
+                    <a href="#classes" class="nav-link text-primary font-semibold hover:text-secondary transition">Classes</a>
+                    <a href="#trainers" class="nav-link text-primary font-semibold hover:text-secondary transition">Trainers</a>
+                    <a href="#membership" class="nav-link text-primary font-semibold hover:text-secondary transition">Membership</a>
+                    <a href="#contact" class="nav-link text-primary font-semibold hover:text-secondary transition">Contact</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-gradient pt-24 pb-16 md:pt-32 md:pb-24">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Transform Your <span class="text-secondary">Body</span></h1>
+                    <p class="text-white text-lg mb-8">Join PowerFit Gym and start your journey to a healthier, stronger you with our state-of-the-art facilities and expert trainers.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#membership" class="bg-secondary text-primary font-bold py-3 px-8 rounded-full hover:bg-yellow-300 transition duration-300 text-center">Join Now</a>
+                        <a href="#classes" class="border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-purple-800 hover:text-primary transition duration-300 text-center">Our Classes</a> <!--bg-white-->
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="Images/Weight Training.avif" alt="Gym Hero" class="rounded-lg shadow-2xl max-w-md w-full">
+                    <!--https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80-->
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="bg-white py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="p-4">
+                        <div class="text-4xl font-bold text-primary mb-2">10+</div>
+                        <div class="text-gray-600">Years Experience</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-4xl font-bold text-primary mb-2">50+</div>
+                        <div class="text-gray-600">Expert Trainers</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-4xl font-bold text-primary mb-2">200+</div>
+                        <div class="text-gray-600">Classes Monthly</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-4xl font-bold text-primary mb-2">5K+</div>
+                        <div class="text-gray-600">Members</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Why Choose <span class="text-secondary">PowerFit</span></h2>
+                    <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
+                    <p class="text-gray-600 max-w-2xl mx-auto">We're committed to helping you achieve your fitness goals with personalized training programs and a supportive community.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-dumbbell text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-4 text-center">Modern Equipment</h3>
+                        <p class="text-gray-600 text-center">Our gym features the latest fitness equipment from top brands to ensure you get the best workout experience.</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-users text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-4 text-center">Expert Trainers</h3>
+                        <p class="text-gray-600 text-center">Our certified trainers are dedicated to helping you reach your goals with personalized attention and guidance.</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-heartbeat text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-4 text-center">Healthy Community</h3>
+                        <p class="text-gray-600 text-center">Join a supportive community of fitness enthusiasts who motivate and inspire each other to be their best selves.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Classes Section -->
+        <section id="classes" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Our <span class="text-secondary">Classes</span></h2>
+                    <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
+                    <p class="text-gray-600 max-w-2xl mx-auto">We offer a variety of classes to suit all fitness levels and preferences. Find the perfect workout for you.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                        <div class="h-48 overflow-hidden">
+                            <img src="Images/Crossfit.jpeg" alt="Crossfit" class="w-full h-full object-cover">
+                            <!--https://images.unsplash.com/photo-1571019614242-cba5dbf4bfc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80-->
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-xl font-bold text-primary">CrossFit</h3>
+                                <span class="bg-secondary text-primary font-bold py-1 px-3 rounded-full text-sm">High Intensity</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">High-intensity functional training that combines weightlifting, gymnastics, and cardio.</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i class="far fa-clock text-primary mr-2"></i>
+                                    <span class="text-gray-600">60 min</span>
+                                </div>
+                                <a href="#" class="text-primary font-semibold hover:text-secondary transition">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                        <div class="h-48 overflow-hidden">
+                            <img src="Images/Yoga.avif" alt="Yoga" class="w-full h-full object-cover">
+                            <!--https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80-->
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-xl font-bold text-primary">Yoga</h3>
+                                <span class="bg-secondary text-primary font-bold py-1 px-3 rounded-full text-sm">Low Impact</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Improve flexibility, strength, and mental clarity through mindful movement and breathing.</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i class="far fa-clock text-primary mr-2"></i>
+                                    <span class="text-gray-600">45 min</span>
+                                </div>
+                                <a href="#" class="text-primary font-semibold hover:text-secondary transition">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                        <div class="h-48 overflow-hidden">
+                            <img src="Images/Weight Training.avif" alt="Weight Training" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-xl font-bold text-primary">Weight Training</h3>
+                                <span class="bg-secondary text-primary font-bold py-1 px-3 rounded-full text-sm">Strength</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Build muscle and increase strength with our structured weight training programs.</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i class="far fa-clock text-primary mr-2"></i>
+                                    <span class="text-gray-600">45-60 min</span>
+                                </div>
+                                <a href="#" class="text-primary font-semibold hover:text-secondary transition">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="#" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-full hover:bg-purple-800 transition duration-300">View All Classes</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trainers Section -->
+        <section id="trainers" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Meet Our <span class="text-secondary">Trainers</span></h2>
+                    <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Our certified trainers are passionate about helping you achieve your fitness goals with personalized attention.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="trainer-card relative overflow-hidden rounded-lg shadow-md">
+                        <img src="Images/Trainers/Alex Johnson.avif" alt="Trainer 1" class="w-full h-80 object-cover">
+                        <div class="trainer-overlay absolute inset-0 bg-primary bg-opacity-80 flex flex-col justify-center items-center opacity-0 transition duration-300 p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Alex Johnson</h3>
+                            <p class="text-secondary mb-4 font-semibold">CrossFit Specialist</p>
+                            <p class="text-white text-center mb-4">With 8 years of experience, Alex will push you to your limits in the most effective way.</p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-white hover:text-secondary transition"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="text-white hover:text-secondary transition"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-white hover:text-secondary transition"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="trainer-card relative overflow-hidden rounded-lg shadow-md">
+                        <img src="Images/Trainers/Sarah Miller.avif" alt="Trainer 2" class="w-full h-80 object-cover">
+                        <div class="trainer-overlay absolute inset-0 bg-primary bg-opacity-80 flex flex-col justify-center items-center opacity-0 transition duration-300 p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Sarah Miller</h3>
+                            <p class="text-secondary mb-4 font-semibold">Yoga Instructor</p>
+                            <p class="text-white text-center mb-4">Sarah brings mindfulness and movement together for a transformative experience.</p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-white hover:text-secondary transition"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="text-white hover:text-secondary transition"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-white hover:text-secondary transition"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="trainer-card relative overflow-hidden rounded-lg shadow-md">
+                        <img src="Images/Trainers/Mike Rodriguez.avif" alt="Trainer 3" class="w-full h-80 object-cover">
+                        <div class="trainer-overlay absolute inset-0 bg-primary bg-opacity-80 flex flex-col justify-center items-center opacity-0 transition duration-300 p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Mike Rodriguez</h3>
+                            <p class="text-secondary mb-4 font-semibold">Strength Coach</p>
+                            <p class="text-white text-center mb-4">Mike specializes in functional strength training and powerlifting techniques.</p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-white hover:text-secondary transition"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="text-white hover:text-secondary transition"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-white hover:text-secondary transition"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="trainer-card relative overflow-hidden rounded-lg shadow-md">
+                        <img src="Images/Trainers/Emily Chen.avif" alt="Trainer 4" class="w-full h-80 object-cover">
+                        <div class="trainer-overlay absolute inset-0 bg-primary bg-opacity-80 flex flex-col justify-center items-center opacity-0 transition duration-300 p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Emily Chen</h3>
+                            <p class="text-secondary mb-4 font-semibold">HIIT Specialist</p>
+                            <p class="text-white text-center mb-4">Emily's high-energy classes will challenge you and deliver results.</p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-white hover:text-secondary transition"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="text-white hover:text-secondary transition"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-white hover:text-secondary transition"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Membership Section -->
+        <section id="membership" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Membership <span class="text-secondary">Plans</span></h2>
+                    <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Choose the plan that fits your fitness journey. All memberships include access to our state-of-the-art facilities.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <div class="membership-card bg-white border border-gray-200 rounded-lg p-8 shadow-md hover:shadow-xl transition duration-300">
+                        <h3 class="text-2xl font-bold text-primary mb-4 text-center">Basic</h3>
+                        <div class="text-4xl font-bold text-primary mb-6 text-center">$29<span class="text-lg text-gray-500">/month</span></div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-secondary mr-2"></i>
+                                <span>Access to gym facilities</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-secondary mr-2"></i>
+                                <span>Locker room access</span>
+                            </li>
+                            <li class="flex items-center text-gray-400">
+                                <i class="fas fa-times text-gray-300 mr-2"></i>
+                                <span>Group classes</span>
+                            </li>
+                            <li class="flex items-center text-gray-400">
+                                <i class="fas fa-times text-gray-300 mr-2"></i>
+                                <span>Personal training</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="block bg-gray-100 text-primary font-bold py-3 px-6 rounded-full text-center hover:bg-secondary hover:text-white transition duration-300">Get Started</a>
+                    </div>
+                    
+                    <div class="membership-card bg-white border-2 border-secondary rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300 relative">
+                        <div class="absolute top-0 right-0 bg-secondary text-primary font-bold py-1 px-4 rounded-bl-lg">POPULAR</div>
+                        <h3 class="text-2xl font-bold text-primary mb-4 text-center">Premium</h3>
+                        <div class="text-4xl font-bold text-primary mb-6 text-center">$59<span class="text-lg text-gray-500">/month</span></div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-secondary mr-2"></i>
+                                <span>Access to gym facilities</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-secondary mr-2"></i>
+                                <span>Locker room access</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-secondary mr-2"></i>
+                                <span>Unlimited group classes</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-secondary mr-2"></i>
+                                <span>2 personal training sessions</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="block bg-secondary text-white font-bold py-3 px-6 rounded-full text-center hover:bg-yellow-300 hover:text-primary transition duration-300">Get Started</a>
+                    </div>
+                    
+                    <div class="membership-card bg-white border border-gray-200 rounded-lg p-8 shadow-md hover:shadow-xl transition duration-300">
+                        <h3 class="text-2xl font-bold text-primary mb-4 text-center">Elite</h3>
+                        <div class="text-4xl font-bold text-primary mb-6 text-center">$99<span class="text-lg text-gray-500">/month</span></div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-secondary mr-2"></i>
+                                <span>Access to gym facilities</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-secondary mr-2"></i>
+                                <span>Locker room access</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-secondary mr-2"></i>
+                                <span>Unlimited group classes</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-secondary mr-2"></i>
+                                <span>5 personal training sessions</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="block bg-gray-100 text-primary font-bold py-3 px-6 rounded-full text-center hover:bg-secondary hover:text-white transition duration-300">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">What Our <span class="text-secondary">Members Say</span></h2>
+                    <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="text-secondary text-2xl mr-2">"</div>
+                            <p class="text-gray-600 italic">PowerFit has completely transformed my fitness journey. The trainers are knowledgeable and the community is so supportive!</p>
+                        </div>
+                        <div class="flex items-center">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Member" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-primary">Jessica T.</h4>
+                                <p class="text-gray-500 text-sm">Member since 2019</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="text-secondary text-2xl mr-2">"</div>
+                            <p class="text-gray-600 italic">I've tried many gyms before, but PowerFit stands out with its excellent equipment and variety of classes. Highly recommend!</p>
+                        </div>
+                        <div class="flex items-center">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Member" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-primary">Michael R.</h4>
+                                <p class="text-gray-500 text-sm">Member since 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="text-secondary text-2xl mr-2">"</div>
+                            <p class="text-gray-600 italic">The personal training sessions have helped me achieve results I never thought possible. Worth every penny!</p>
+                        </div>
+                        <div class="flex items-center">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Member" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-primary">Sarah K.</h4>
+                                <p class="text-gray-500 text-sm">Member since 2021</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 bg-primary">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Body?</h2>
+                <p class="text-white text-xl mb-8 max-w-2xl mx-auto">Join PowerFit Gym today and start your journey to a healthier, stronger you.</p>
+                <a href="#membership" class="inline-block bg-secondary text-primary font-bold py-3 px-8 rounded-full hover:bg-yellow-300 transition duration-300">Join Now</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Contact <span class="text-secondary">Us</span></h2>
+                    <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Have questions? We're here to help. Reach out to us and we'll get back to you as soon as possible.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                    <div>
+                        <h3 class="text-xl font-bold text-primary mb-6">Get In Touch</h3>
+                        <form class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-gray-700 mb-2">Your Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-purple-800 transition duration-300">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold text-primary mb-6">Our Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-secondary text-primary w-10 h-10 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Address</h4>
+                                    <p class="text-gray-600">123 Fitness Street, Health City, HC 12345</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-secondary text-primary w-10 h-10 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Phone</h4>
+                                    <p class="text-gray-600">(123) 456-7890</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-secondary text-primary w-10 h-10 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Email</h4>
+                                    <p class="text-gray-600">
+                                        info.powerfitgym.com
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-secondary text-primary w-10 h-10 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Hours</h4>
+                                    <p class="text-gray-600">Monday - Friday: 5:00 AM - 11:00 PM</p>
+                                    <p class="text-gray-600">Saturday - Sunday: 7:00 AM - 9:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-gray-800 mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-gray-100 text-primary w-10 h-10 rounded-full flex items-center justify-center hover:bg-secondary hover:text-white transition duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-gray-100 text-primary w-10 h-10 rounded-full flex items-center justify-center hover:bg-secondary hover:text-white transition duration-300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-gray-100 text-primary w-10 h-10 rounded-full flex items-center justify-center hover:bg-secondary hover:text-white transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-gray-100 text-primary w-10 h-10 rounded-full flex items-center justify-center hover:bg-secondary hover:text-white transition duration-300">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-4 gap-8 mb-8">
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-dumbbell text-3xl text-primary mr-2"></i>
+                            <span class="text-2xl font-bold text-white">Power<span class="text-secondary">Fit</span></span>
+                        </div>
+                        <p class="text-gray-400">Transform your body and mind with our state-of-the-art facilities and expert trainers.</p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-bold text-white mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-gray-400 hover:text-secondary transition">Home</a></li>
+                            <li><a href="#about" class="text-gray-400 hover:text-secondary transition">About Us</a></li>
+                            <li><a href="#classes" class="text-gray-400 hover:text-secondary transition">Classes</a></li>
+                            <li><a href="#trainers" class="text-gray-400 hover:text-secondary transition">Trainers</a></li>
+                            <li><a href="#membership" class="text-gray-400 hover:text-secondary transition">Membership</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-bold text-white mb-4">Classes</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-secondary transition">CrossFit</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-secondary transition">Yoga</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-secondary transition">Weight Training</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-secondary transition">HIIT</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-secondary transition">Pilates</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-bold text-white mb-4">Newsletter</h4>
+                        <p class="text-gray-400 mb-4">Subscribe to our newsletter for fitness tips and special offers.</p>
+                        <form class="flex">
+                            <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full">
+                            <button type="submit" class="bg-secondary text-primary px-4 py-2 rounded-r-lg font-bold hover:bg-yellow-300 transition duration-300">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">© 2023 PowerFit Gym. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-secondary transition">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-secondary transition">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Back to Top Button -->
+        <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-purple-800 transition duration-300 hidden"> <!--bg-yellow-300-->
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+        <script>
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking on a link
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+            
+            // Back to Top Button
+            const backToTopButton = document.getElementById('back-to-top');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.remove('hidden');
+                } else {
+                    backToTopButton.classList.add('hidden');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Smooth scrolling for all links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
